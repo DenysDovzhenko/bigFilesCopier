@@ -13,7 +13,7 @@ copyFiles() {
 
     find "$DIR" -type f -exec du -h {} + | sort -rh | head -n "$N" | cut -f2- | xargs -I {} cp {} "$DIR_TO"
 
-    echo "Copied $N largest files from $DIR to $DIR_TO"
+    echo "Copying from directory $DIR to directory $DIR_TO was successful"
 }
 
 scriptHelp() {
